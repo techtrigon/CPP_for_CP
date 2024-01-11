@@ -1,0 +1,11 @@
+location of header stdc++ ---->
+
+C:\Program Files\mingw64\include\c++\13.2.0\x86_64-w64-mingw32\bits
+
+
+replace the 'stdc++.h' file in the directory with this one and extract the file 'stdcpp.h'
+
+
+command to precompile ---->
+
+g++ stdc++.h
