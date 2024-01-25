@@ -6,7 +6,7 @@ This repository provides an updated version of the `stdc++.h` file, commonly use
 
 `{mingw64_folder_location}\include\c++\{compiler_version}\x86_64-w64-mingw32\bits`
 
-You can replace the existing `stdc++.h` file in this directory with the one provided here. Additionally, extract the `stdcpp.h` file into the directory.
+You can replace the existing `stdc++.h` file in this directory with the one provided here.
 
 ## Precompiling
 
