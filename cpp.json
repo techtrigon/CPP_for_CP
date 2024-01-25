@@ -1,0 +1,307 @@
+{
+	"cpp default": {
+		"prefix": "cpp",
+		"body": [
+			"// clang-format off",
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"template <class K , class V>ostream& operator<<( ostream& s , const pair<K , V>& p ){ return s << '<' << p.first << \", \" << p.second << '>'; }template <class T , class = typename T::value_type , class = typename enable_if<!is_same<T , string>::value>::type>ostream& operator<<( ostream& s , const T& v ){ s << \"[ \"; for( auto i = v.begin ( ); i != v.end ( ); i++ )i == v.begin ( ) ? s << *i : s << \", \" << *i; return v.empty ( ) ? s << \"]\" : ( s << \" ]\" ); }template <class... Ts>void __prnt ( const Ts&... args ){ ( ( cerr << args << \" ____ \" ) , ... ); }" ,
+			"#define db(...) { cerr << \"   <::> \" << #__VA_ARGS__ << \" |= \", __prnt(__VA_ARGS__); cerr << '\\n';}",
+			"#define ll long long",
+			"#define int long long",
+			"// clang-format on",
+			"",
+			"void sol ( ) {",
+			"   $1",
+			"   }",
+			"",
+			"signed main ( ) {",
+			"   ios_base::sync_with_stdio ( false ); cin.tie ( nullptr ); cout.tie ( nullptr );",
+			"   int t = 1;",
+			"   cin>>t;",
+			"   while ( t-- ) sol ( );",
+			"   return 0;"
+			"   }"
+		],
+	},
+	"Header cpp": {
+		"prefix": "head",
+		"body": [
+			"// clang-format off",
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"template <class K , class V>ostream& operator<<( ostream& s , const pair<K , V>& p ){ return s << '<' << p.first << \", \" << p.second << '>'; }template <class T , class = typename T::value_type , class = typename enable_if<!is_same<T , string>::value>::type>ostream& operator<<( ostream& s , const T& v ){ s << \"[ \"; for( auto i = v.begin ( ); i != v.end ( ); i++ )i == v.begin ( ) ? s << *i : s << \", \" << *i; return v.empty ( ) ? s << \"]\" : ( s << \" ]\" ); }template <class... Ts>void __prnt ( const Ts&... args ){ ( ( cout << args << \" ____ \" ) , ... ); }" ,
+			"#define db(...) { cout << \"   <::> \" << #__VA_ARGS__ << \" |= \", __prnt(__VA_ARGS__);cout << '\\n';}",
+			"#define ll long long",
+			"// clang-format on",
+			"",
+			// "template<class K , class V>ostream& operator<<( ostream& s , const pair<K , V>& p ) { s << '<' << p.first << \", \" << p.second << '>'; return s; }template<class T , class = typename T::value_type , class = typename enable_if<!is_same<T , string>::value>::type>ostream& operator<<( ostream& s , const T& v ) { s << \"[ \"; for ( auto& x : v ) { s << x << \", \"; }if ( !v.empty ( ) ) { s << \"\\b\\b\"; }s << \" ]\"; return s; }void __prnt ( ) { cout << \"\\n\"; } template<class T , class...Ts>void __prnt ( T&& a , Ts&&...etc ) { cout << a << \",  \"; __prnt ( etc... ); }",
+			// "#define db(...) { cout<<\" ,, \"<< #__VA_ARGS__<<\" = \";__prnt(__VA_ARGS__); }",
+			// "#define loop(i, b, e) for (auto i = (b) - ((b) > (e)); i != (e) - ((b) > (e)); i += 1 - 2 * ((b) > (e)))",
+		],
+	},
+	"repetitions(loop)": {
+		"prefix": "loop",
+		"body": [
+         "for ( auto ${1:i} = ${2}; ${3}; ${4: cond} ) {",
+         "   $5",
+         "   }",
+		],
+	},
+	// "print all": {
+	// 	"prefix": "print",
+	// 	"body": [
+	// 		"   for ( auto& val : ${container} ) {",
+	// 		"   cout << val << \" \";",
+	// 		"   }",
+	// 		"   cout << \"\\n\";",
+	// 	],
+	// 	"description": "print all"
+	// },
+	"vector": {
+		"prefix": "vinput",
+		"body": [
+			"int n;",
+			"cin >> n;",
+			"vector<int> v ( n );",
+			"for ( int i = 0; i < n; i++ ) {",
+			"   cin >> v [ i ];",
+			"   }",
+			"$1",
+		],
+		"description": "input vector"
+	},
+	"print YES": {
+		"prefix": "yes",
+		"body": [ "cout << \"Yes\\n\";" ],
+	},
+	"print NO": {
+		"prefix": "no",
+		"body": [ " cout << \"No\\n\";" ],
+	},
+	"cin": {
+		"prefix": "cn",
+		"body": [ "cin >> $1;", ],
+	},
+	"cout": {
+		"prefix": "co",
+		"body": [ "cout << $1 << ' ';", ],
+	},
+	"binary exponentiation": {
+		"prefix": "powx",
+		"body": [
+			"   int pow ( int base, int exp ) {",
+			"      int res = 1; ",
+			"      for ( ; exp > 0; exp >>= 1 ) {",
+			"         if ( exp & 1 ) res = res * base;",
+			"         base *= base;",
+			"         }",
+			"      return res;",
+			"      }",
+		],
+		"description": "binary exponentiation"
+	},
+	"binomialCoeff": {
+		"prefix": "ncr1",
+		"body": [
+			"int int md = 1000000007;",
+			"int binomialCoeff(int n, int r){ ",
+			"   if (r > n)",
+			"       return 0;",
+			"   int int inv[r + 1] = { 0 };",
+			"   inv[0] = 1;",
+			"   if(r+1>=2)",
+			"   inv[1] = 1;",
+			"   for (int i = 2; i <= r; i++) {",
+			"       inv[i] = md - (md / i) * inv[md % i] % md;",
+			"   }",
+			"   int ans = 1;",
+			"   for (int i = 2; i <= r; i++) {",
+			"       ans = ((ans % md) * (inv[i] % md)) % md;",
+			"   }",
+			"   for (int i = n; i >= (n - r + 1); i--) {",
+			"       ans = ((ans % md) * (i % md)) % md;",
+			"   }",
+			"   return ans;",
+			"   }",
+		],
+		"description": "binomial coefficient"
+	},
+	"ncr": {
+		"prefix": "ncr",
+		"body": [
+			"int md = 1e9 + 7;",
+			"int ncr ( int n , int r ) {",
+			"   ll ans = 1 , rfact = 1 , inv = 1 , exp = md - 2;",
+			"   if ( n - r < r ) r = n - r;",
+			"   loop ( i , n + 1 , n - r + 1 ) ans = ( ans % md * ( i ) % md ) % md; // n*(n-1)*(n-2)*.....*(n-r+1);",
+			"   loop ( i , r + 1 , 1 ) rfact = ( rfact % md * ( i ) % md ) % md; // r!",
+			"   for ( int exp = md - 2; exp; exp >>= 1 ) { // binary exponentiation with mod=1e9+7 to calculate inverse mod",
+			"      if ( exp & 1 ) inv = ( inv * rfact ) % md;",
+			"      rfact = ( rfact * rfact ) % md;",
+			"      }",
+			"   ans = ( ans % md * ( inv ) % md ) % md;",
+			"   return ans;",
+			"   }",
+		],
+		"description": "ncr"
+	},
+	"iteratore for": {
+		"prefix": "itfor",
+		"body": [
+			"for( auto it=$1.begin(); it!=$1.end(); ++it ){",
+			"   auto i = *it;",
+			"   $2",
+			"   }",
+		],
+		"description": "iterator for loop"
+	},
+	"vector<int>": {
+		"prefix": "vi",
+		"body": [ "vector<int> $1", ],
+	},
+	"vector<bool>": {
+		"prefix": "vb",
+		"body": [ "vector<bool> $1", ],
+	},
+	"vector<vector<int>>": {
+		"prefix": "vvi",
+		"body": [ "vector<vector<int>> $1", ],
+	},
+	"vector<vector<char>>": {
+		"prefix": "vvc",
+		"body": [
+			"vector<vector<char>> $1",
+		],
+	},
+	"vector<vector<int>> v( n , vector<int> (m, 0)); ": {
+		"prefix": "vvi2",
+		"body": [
+			"vector<vector<int>> v( $1, vector<int> ($2, 0));",],
+	},
+	"vector<vector<string>>": {
+		"prefix": "vvs",
+		"body": [
+			"vector<vector<string>> $1",],
+	},
+	"pair<int,int>": {
+		"prefix": "pii",
+		"body": [
+			"pair<int,int> $1",],
+	},
+	"pair<string,int>": {
+		"prefix": "psi",
+		"body": [
+			"pair<string,int> $1",],
+	},
+	"vector<pair<int,int>>": {
+		"prefix": "vpii",
+		"body": [
+			"vector<pair<int,int>> $1",],
+	},
+	"vector<string>": {
+		"prefix": "vs",
+		"body": [
+			"vector<string> $1",],
+	},
+	"map<int,int>": {
+		"prefix": "mii",
+		"body": [
+			"map<int,int> $1",],
+	},
+	"map<char,int>": {
+		"prefix": "mci",
+		"body": [
+			"map<char,int> $1",],
+	},
+	"unordered_map<char,int>": {
+		"prefix": "umci",
+		"body": [
+			"unordered_map<char,int> $1",],
+	},
+	"unordered_map<int,int>": {
+		"prefix": "umii",
+		"body": [
+			"unordered_map<int,int> $1",],
+	},
+	"unordered_set<int>": {
+		"prefix": "usi",
+		"body": [
+			"unordered_set<int> $1",],
+	},
+	"unordered_set<char>": {
+		"prefix": "usc",
+		"body": [
+			"unordered_set<char> $1",],
+	},
+	"unordered_set<string>": {
+		"prefix": "uss",
+		"body": [
+			"unordered_set<string> $1",],
+	},
+	"set<int>": {
+		"prefix": "si",
+		"body": [
+			"set<int> $1",],
+	},
+	"set<pair<int,int>>": {
+		"prefix": "spii",
+		"body": [
+			"set<pair<int,int>> $1",],
+	},
+	"deque<pair<int,int>>": {
+		"prefix": "dpii",
+		"body": [
+			"deque<pair<int,int>> $1",],
+	},
+	"deque<int>": {
+		"prefix": "di",
+		"body": [
+			"deque<int> $1",],
+	},
+	"new line": {
+		"prefix": "nl",
+		"body": [
+			"cout << '\\n';",],
+	},
+	"oset": {
+		"prefix": "oset",
+		"body": [
+			"#include <ext/pb_ds/assoc_container.hpp>",
+			"using namespace __gnu_pbds;",
+			"typedef tree<int, null_type, less<int>, rb_tree_tag,tree_order_statistics_node_update> oset;",
+		],
+		"description": "pbds set"
+	},
+	"debug": {
+		"prefix": "db",
+		"body": [ "db( $1 );", ],
+	},
+	"comparator": {
+	"prefix": "cmp",
+	"body": [
+	"struct comp{",
+	"   // if true then sort it in that way else not ",
+	"   bool operator()( const ${1:type}& l , const ${1:type}& r ) const{",
+	"     ${2}",
+	"     }",
+	"   };",
+	],
+	"description": "comparator"
+},
+	"sort asc": {
+	"prefix": "sort",
+	"body": [
+		"sort( ${1:var}.${2}begin( ), ${1:var}.${2}end( ) );",
+	],
+	"description": "sort asc"
+	},
+	"reverse": {
+	"prefix": "reverse",
+	"body": [
+		"reverse( ${1:var}.begin( ), ${1:var}.end( ) );",
+	],
+	"description": "reverse"
+	},
+
+}
