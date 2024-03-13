@@ -22,6 +22,11 @@ This helps in speeding up compilation times by precompiling the header.
 
 The repository includes a powerful and versatile debugging function named `db`. This function can take any variable and print it, making it extremely useful for quick and easy code logging/debugging in competitive programming and other Data Structure and Algorithm tests.
 
+
+## Custom print() and scan() function 
+
+No neeed to use << to print or >> to read inputs 
+
 ### Example Usage:
 
 ```cpp
