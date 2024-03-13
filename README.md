@@ -25,9 +25,18 @@ The repository includes a powerful and versatile debugging function named `db`. 
 ### Example Usage:
 
 ```cpp
+// clang-format off
 #include <bits/stdc++.h>
 using namespace std;
+template <class K, class V>ostream& operator<<( ostream& s, const pair<K, V>& prs ){ return s << '<' << prs.first << ", " << prs.second << '>'; }template <class T, class = typename T::value_type, class = typename enable_if<!is_same<T, string>::value>::type>ostream& operator<<( ostream& s, const T& v ){ s << "[ "; for( auto i = v.begin(); i != v.end(); i++ )i == v.begin() ? s << *i : s << ", " << *i; return v.empty() ? s << "]" : ( s << " ]" ); }template <class... Ts>void __prnt( const Ts&... args ){ ( ( cout << args << " __ " ), ... ); }
+#define db(...) (cout << " (:> " << #__VA_ARGS__ << " |= ", __prnt(__VA_ARGS__), cout << '\n')
+template<typename T>void __prnt1( const T& arg ){ if constexpr( is_same_v<T, char> ) arg == '\n' ? cout << arg : cout << arg << ' '; else cout << arg << ' '; }template<typename... Args>void __prnt1( const Args&... args ){ ( __prnt1( args ), ... ); }
+#define print(...) __prnt1(__VA_ARGS__)
+template<typename... Args>void scan( Args&... args ){ ( ( cin >> args ), ... ); }
+// #define int long long
+// clang-format on
 #define ll long long
+ll md = 1e9 + 7, inf = 1e18;
 
 void sol ( ){
   int x = 4;
