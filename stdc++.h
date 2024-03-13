@@ -4,30 +4,32 @@
 #endif
 // #include <cctype>
 #include <cmath>
-#include <cstdio>
+// #include <cstdio>
 #include <cstdlib>
-#include <cstring>
+// #include <cstring>
 
 // C++
 #include <algorithm>
+#include <bitset>
 #include <iostream>
 #include <vector>
 #include <deque>
 #include <queue>
 #include <set>
+#include <stack>
 #include <map>
 #include <list>
 #include <iterator>
 #include <string>
-#include <sstream>
-#include <functional>
+// #include <functional>
 #include <forward_list>
 #include <random>
-#include <array>
+// #include <array>
 #include <chrono>
-#include <thread>
-#include <tuple>
+// #include <thread>
+// #include <tuple>
 #include <unordered_map>
 #include <unordered_set>
+#include <type_traits>
+// #include <sstream>
 // #include <stdexcept>
-// #include <type_traits>
