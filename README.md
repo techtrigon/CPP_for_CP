@@ -13,7 +13,7 @@ You can replace the existing `stdc++.h` file in this directory with the one prov
 After replacing the file, you can use the following command to precompile your C++ code:
 
 ```bash/cmd
-g++ -O1 -Wall -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wduplicated-cond -Wcast-qual -Wcast-align -Wno-unused-variable -Wno-sign-compare -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -fno-sanitize-recover -fstack-protector -fanalyzer stdc++.h
+g++ -O1 -fconcepts -D_GLIBCXX_DEBUG -DLC_LOCAL -Wall -Wextra -Wno-c++20-extensions -pedantic -Wshadow -Wno-unused-parameter -Wlogical-op -Wno-unused-variable -Wno-sign-compare stdc++.h
 ```
 
 This helps in speeding up compilation times by precompiling the header.
@@ -33,8 +33,8 @@ No neeed to use << to print or >> to read inputs
 // clang-format off
 #include <bits/stdc++.h>
 using namespace std;
-template <class K, class V>ostream& operator<<( ostream& s, const pair<K, V>& prs ){ return s << '<' << prs.first << ", " << prs.second << '>'; }template <class T, class = typename T::value_type, class = typename enable_if<!is_same<T, string>::value>::type>ostream& operator<<( ostream& s, const T& v ){ s << "[ "; for( auto i = v.begin(); i != v.end(); i++ )i == v.begin() ? s << *i : s << ", " << *i; return v.empty() ? s << "]" : ( s << " ]" ); }template <class... Ts>void __prnt( const Ts&... args ){ ( ( cout << args << " __ " ), ... ); }
-#define db(...) (cout << " (:> " << #__VA_ARGS__ << " |= ", __prnt(__VA_ARGS__), cout << '\n')
+template <class klsx, class vkkj> ostream& operator<<(ostream& sdnsf, const pair<klsx, vkkj>& prs); template <class T, size_t N> ostream& operator<<(ostream& sdnsf, const array<T, N>& nc_d) { sdnsf << "[ "; for (size_t i = 0; i < N; ++i) { sdnsf << nc_d[i]; if (i < N - 1) { sdnsf << ", "; }}return sdnsf << " ]"; }  template <class T, class = typename T::value_type, class = typename enable_if<!is_same<T, string>::value>::type> ostream& operator<<(ostream& sdnsf, const T& __v_V_) {     sdnsf << "[ ";     for (auto i = __v_V_.begin(); i != __v_V_.end(); i++) i == __v_V_.begin() ? sdnsf << *i : sdnsf << ", " << *i; return __v_V_.empty() ? sdnsf << "]" : (sdnsf << " ]"); }  template <class klsx, class vkkj> ostream& operator<<(ostream& sdnsf, const pair<klsx, vkkj>& prs) { return sdnsf << '<' << prs.first << ", " << prs.second << '>'; } template <class... Ts> void __prnt(const Ts&... args) { ((cerr << args << " __ "), ...); }
+#define db(...) (cerr << " (:> " << #__VA_ARGS__ << " |= ", __prnt(__VA_ARGS__), cerr << '\n')
 template<typename T>void __prnt1( const T& arg ){ if constexpr( is_same_v<T, char> ) arg == '\n' ? cout << arg : cout << arg << ' '; else cout << arg << ' '; }template<typename... Args>void __prnt1( const Args&... args ){ ( __prnt1( args ), ... ); }
 #define print(...) __prnt1(__VA_ARGS__)
 template<typename... Args>void scan( Args&... args ){ ( ( cin >> args ), ... ); }
