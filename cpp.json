@@ -2,74 +2,128 @@
 	"cpp default": {
 		"prefix": "cpp",
 		"body": [
-			"// clang-format off",
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
-			"template <class K , class V>ostream& operator<<( ostream& s , const pair<K , V>& p ){ return s << '<' << p.first << \", \" << p.second << '>'; }template <class T , class = typename T::value_type , class = typename enable_if<!is_same<T , string>::value>::type>ostream& operator<<( ostream& s , const T& v ){ s << \"[ \"; for( auto i = v.begin ( ); i != v.end ( ); i++ )i == v.begin ( ) ? s << *i : s << \", \" << *i; return v.empty ( ) ? s << \"]\" : ( s << \" ]\" ); }template <class... Ts>void __prnt ( const Ts&... args ){ ( ( cerr << args << \" ____ \" ) , ... ); }" ,
-			"#define db(...) { cerr << \"   <::> \" << #__VA_ARGS__ << \" |= \", __prnt(__VA_ARGS__); cerr << '\\n';}",
-			"#define ll long long",
-			"#define int long long",
+			"// clang-format off",
+			"template <class klsx, class vkkj> ostream& operator<<(ostream& sdnsf, const pair<klsx, vkkj>& prs); template <class T, size_t N> ostream& operator<<(ostream& sdnsf, const array<T, N>& nc_d) { sdnsf << \"[ \"; for (size_t i = 0; i < N; ++i) { sdnsf << nc_d[i]; if (i < N - 1) { sdnsf << \", \"; }}return sdnsf << \" ]\"; }  template <class T, class = typename T::value_type, class = typename enable_if<!is_same<T, string>::value>::type> ostream& operator<<(ostream& sdnsf, const T& __v_V_) {     sdnsf << \"[ \";     for (auto i = __v_V_.begin(); i != __v_V_.end(); i++) i == __v_V_.begin() ? sdnsf << *i : sdnsf << \", \" << *i; return __v_V_.empty() ? sdnsf << \"]\" : (sdnsf << \" ]\"); }  template <class klsx, class vkkj> ostream& operator<<(ostream& sdnsf, const pair<klsx, vkkj>& prs) { return sdnsf << '<' << prs.first << \", \" << prs.second << '>'; } template <class... Ts> void __prnt(const Ts&... args) { ((cerr << args << \" __ \"), ...); }",
+			"#define db(...) (cerr << \" (:> \" << #__VA_ARGS__ << \" |= \", __prnt(__VA_ARGS__), cerr << '\\n')",
+
+			// "template<typename T, typename = void>struct is_container : false_type{}; template<typename T> struct is_container<T, void_t<typename T::value_type>> : true_type{}; template<typename T, size_t N>struct is_container<array<T, N>> : true_type{}; template<typename T>struct is_map : false_type{}; template<typename... Args>struct is_map<map<Args...>> : true_type{}; template<typename T1, typename T2>ostream& operator<<( ostream& ostrm, const pair<T1, T2>& prs ); template<typename T, typename = enable_if_t<is_container<T>::value>>ostream& operator<<( ostream& ostrm, const T& Contnr ){ ostrm << \"{ \"; if constexpr( is_map<T>::value ){ for( const auto& [kdsl, sdkj] : Contnr ){ ostrm << \"( \" << kdsl << \" : \" << sdkj << \" )\"; } } else{ bool first = true; for( const auto& elem : Contnr ){ if( !first ) ostrm << \", \"; ostrm << elem; first = false; } }ostrm << \" }\"; return ostrm; }template<typename T1, typename T2>ostream& operator<<( ostream& ostrm, const pair<T1, T2>& prs ){ return ostrm << \"(\" << prs.first << \", \" << prs.second << \")\"; }; void __prnt(){}template<typename T, typename... Args>void __prnt( T&& tpsvd, Args&&... args ){ cerr << tpsvd; if( sizeof...( args ) ) cerr << \", \"; __prnt( forward<Args>( args )... ); }",
+
+			"template<typename... Args>void scan( Args&... args ){ ( ( cin >> args ) , ... ); }template<typename T>void print( const T& arg ){ if constexpr( is_same_v<T , char> ) arg == '\\n' ? cout << arg : cout << arg << ' '; else cout << arg << ' '; }template<typename... Args>void print( const Args&... args ){ ( print( args ) , ... ); }",
 			"// clang-format on",
+			"#define int long long",
+			"#define ll long long",
+			"#define all(vls) vls.begin(),vls.end()",
+			"const int md = 1e9 + 7, inf = 1e18, N = 1e6;",
 			"",
-			"void sol ( ) {",
+			"void __(){",
 			"   $1",
 			"   }",
 			"",
-			"signed main ( ) {",
-			"   ios_base::sync_with_stdio ( false ); cin.tie ( nullptr ); cout.tie ( nullptr );",
-			"   int t = 1;",
-			"   cin>>t;",
-			"   while ( t-- ) sol ( );",
-			"   return 0;"
-			"   }"
+			"signed main( ){",
+			"   ios_base::sync_with_stdio( false ); cin.tie( nullptr );",
+			"   int _ = 1;",
+			"   cin >> _;",
+			"   while( _-- ) __();",
+			"   return 0;",
+			"   }",
 		],
 	},
-	"Header cpp": {
-		"prefix": "head",
+	"atcoder template": {
+		"prefix": "atcoder",
 		"body": [
-			"// clang-format off",
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
-			"template <class K , class V>ostream& operator<<( ostream& s , const pair<K , V>& p ){ return s << '<' << p.first << \", \" << p.second << '>'; }template <class T , class = typename T::value_type , class = typename enable_if<!is_same<T , string>::value>::type>ostream& operator<<( ostream& s , const T& v ){ s << \"[ \"; for( auto i = v.begin ( ); i != v.end ( ); i++ )i == v.begin ( ) ? s << *i : s << \", \" << *i; return v.empty ( ) ? s << \"]\" : ( s << \" ]\" ); }template <class... Ts>void __prnt ( const Ts&... args ){ ( ( cout << args << \" ____ \" ) , ... ); }" ,
-			"#define db(...) { cout << \"   <::> \" << #__VA_ARGS__ << \" |= \", __prnt(__VA_ARGS__);cout << '\\n';}",
-			"#define ll long long",
+			"// clang-format off",
+			"template <class klsx, class vkkj> ostream& operator<<(ostream& sdnsf, const pair<klsx, vkkj>& prs); template <class T, size_t N> ostream& operator<<(ostream& sdnsf, const array<T, N>& nc_d) { sdnsf << \"[ \"; for (size_t i = 0; i < N; ++i) { sdnsf << nc_d[i]; if (i < N - 1) { sdnsf << \", \"; }}return sdnsf << \" ]\"; }  template <class T, class = typename T::value_type, class = typename enable_if<!is_same<T, string>::value>::type> ostream& operator<<(ostream& sdnsf, const T& __v_V_) {     sdnsf << \"[ \";     for (auto i = __v_V_.begin(); i != __v_V_.end(); i++) i == __v_V_.begin() ? sdnsf << *i : sdnsf << \", \" << *i; return __v_V_.empty() ? sdnsf << \"]\" : (sdnsf << \" ]\"); }  template <class klsx, class vkkj> ostream& operator<<(ostream& sdnsf, const pair<klsx, vkkj>& prs) { return sdnsf << '<' << prs.first << \", \" << prs.second << '>'; } template <class... Ts> void __prnt(const Ts&... args) { ((cerr << args << \" __ \"), ...); }",
+			"#define db(...) (cerr << \" (:> \" << #__VA_ARGS__ << \" |= \", __prnt(__VA_ARGS__), cerr << '\\n')",
+
+			// "template<typename T, typename = void>struct is_container : false_type{}; template<typename T> struct is_container<T, void_t<typename T::value_type>> : true_type{}; template<typename T, size_t N>struct is_container<array<T, N>> : true_type{}; template<typename T>struct is_map : false_type{}; template<typename... Args>struct is_map<map<Args...>> : true_type{}; template<typename T1, typename T2>ostream& operator<<( ostream& ostrm, const pair<T1, T2>& prs ); template<typename T, typename = enable_if_t<is_container<T>::value>>ostream& operator<<( ostream& ostrm, const T& Contnr ){ ostrm << \"{ \"; if constexpr( is_map<T>::value ){ for( const auto& [kdsl, sdkj] : Contnr ){ ostrm << \"( \" << kdsl << \" : \" << sdkj << \" )\"; } } else{ bool first = true; for( const auto& elem : Contnr ){ if( !first ) ostrm << \", \"; ostrm << elem; first = false; } }ostrm << \" }\"; return ostrm; }template<typename T1, typename T2>ostream& operator<<( ostream& ostrm, const pair<T1, T2>& prs ){ return ostrm << \"(\" << prs.first << \", \" << prs.second << \")\"; }; void __prnt(){}template<typename T, typename... Args>void __prnt( T&& tpsvd, Args&&... args ){ cerr << tpsvd; if( sizeof...( args ) ) cerr << \", \"; __prnt( forward<Args>( args )... ); }",
+
+			"template<typename... Args>void scan( Args&... args ){ ( ( cin >> args ) , ... ); }template<typename T>void print( const T& arg ){ if constexpr( is_same_v<T , char> ) arg == '\\n' ? cout << arg : cout << arg << ' '; else cout << arg << ' '; }template<typename... Args>void print( const Args&... args ){ ( print( args ) , ... ); }",
 			"// clang-format on",
+			"#define int long long",
+			"#define ll long long",
+			"#define all(vls) vls.begin(),vls.end()",
+			"const int md = 1e9 + 7, inf = 1e18, N = 1e6;",
 			"",
-			// "template<class K , class V>ostream& operator<<( ostream& s , const pair<K , V>& p ) { s << '<' << p.first << \", \" << p.second << '>'; return s; }template<class T , class = typename T::value_type , class = typename enable_if<!is_same<T , string>::value>::type>ostream& operator<<( ostream& s , const T& v ) { s << \"[ \"; for ( auto& x : v ) { s << x << \", \"; }if ( !v.empty ( ) ) { s << \"\\b\\b\"; }s << \" ]\"; return s; }void __prnt ( ) { cout << \"\\n\"; } template<class T , class...Ts>void __prnt ( T&& a , Ts&&...etc ) { cout << a << \",  \"; __prnt ( etc... ); }",
-			// "#define db(...) { cout<<\" ,, \"<< #__VA_ARGS__<<\" = \";__prnt(__VA_ARGS__); }",
-			// "#define loop(i, b, e) for (auto i = (b) - ((b) > (e)); i != (e) - ((b) > (e)); i += 1 - 2 * ((b) > (e)))",
+			"void __(){",
+			"   ${1:}",
+			"   }",
+			"",
+			"signed main(){",
+			"   ios_base::sync_with_stdio( false ); cin.tie( nullptr );",
+			"   __();",
+			"   return 0;",
+			"   }",
+			""
 		],
+		"description": "atcoder"
+	},
+	"leetcode template": {
+		"prefix": "leet",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"// clang-format off",
+			"template <class klsx, class vkkj> ostream& operator<<(ostream& sdnsf, const pair<klsx, vkkj>& prs); template <class T, size_t N> ostream& operator<<(ostream& sdnsf, const array<T, N>& nc_d) { sdnsf << \"[ \"; for (size_t i = 0; i < N; ++i) { sdnsf << nc_d[i]; if (i < N - 1) { sdnsf << \", \";         }     }     return sdnsf << \" ]\"; }  template <class T, class = typename T::value_type, class = typename enable_if<!is_same<T, string>::value>::type> ostream& operator<<(ostream& sdnsf, const T& __v_V_) {     sdnsf << \"[ \";     for (auto i = __v_V_.begin(); i != __v_V_.end(); i++) i == __v_V_.begin() ? sdnsf << *i : sdnsf << \", \" << *i; return __v_V_.empty() ? sdnsf << \"]\" : (sdnsf << \" ]\"); }  template <class klsx, class vkkj> ostream& operator<<(ostream& sdnsf, const pair<klsx, vkkj>& prs) { return sdnsf << '<' << prs.first << \", \" << prs.second << '>'; } template <class... Ts> void __prnt(const Ts&... args) { ((cout << args << \" __ \"), ...); }",
+			"#define db(...) (cout << \" (:> \" << #__VA_ARGS__ << \" |= \", __prnt(__VA_ARGS__), cout << '\\n')",
+			"// clang-format on",
+			"#define ll long long",
+			"#define all(vls) vls.begin(),vls.end()",
+			"const ll md = 1e9 + 7, inf = 1e18, N = 1e6;",
+			"",
+		],
+		"description": "leetcode"
+	},
+	"gfg/codestudio": {
+		"prefix": "gfg",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"// clang-format off",
+			"template <class _JXC, class _ZDA> ostream& operator<<(ostream& _ZBX, const pair<_JXC, _ZDA>& prs) {     return _ZBX << '<' << prs.first << \", \" << prs.second << '>'; }  template <class T, size_t N> ostream& operator<<(ostream& _ZBX, const array<T, N>& _ASX) { _ZBX << \"[ \"; for (size_t i = 0; i < N; ++i) { _ZBX << _ASX[i]; if (i < N - 1) { _ZBX << \", \"; } } return _ZBX << \" ]\"; } template <class T, class = typename T::value_type, class = typename enable_if<!is_same<T, string>::value>::type> ostream& operator<<(ostream& _ZBX, const T& _ZXJH) {  _ZBX << \"[ \"; for (auto i = _ZXJH.begin(); i != _ZXJH.end(); i++) i == _ZXJH.begin() ? _ZBX << *i : _ZBX << \", \" << *i;     return _ZXJH.empty() ? _ZBX << \"]\" : (_ZBX << \" ]\"); } template <class... Ts> void __prnt(const Ts&... args) {     using expander = int[];     (void)expander{0, (void(cout << args << \" __ \"), 0)...}; }",
+			"#define db(...) (cout << \" (:> \" << #__VA_ARGS__ << \" |= \", __prnt(__VA_ARGS__), cout << '\\n')",
+
+			// "template<typename... Ts>struct make_void{ typedef void type; }; template<typename... Ts>using void_tp = typename make_void<Ts...>::type; template<typename T, typename = void>struct is_container : false_type{}; template<typename T>struct is_container<T, void_tp<typename T::value_type>> : true_type{}; template<typename T1, typename T2>ostream& operator<<( ostream& ostrm, const pair<T1, T2>& prs ); template<typename T, size_t N>ostream& operator<<( ostream& ostrm, const array<T, N>& arr ){ ostrm << \"{ \"; for( size_t i = 0; i < N; ++i ){ if( i > 0 ) ostrm << \", \"; ostrm << arr[ i ]; }ostrm << \" }\"; return ostrm; }template<typename T, typename = enable_if_t<is_container<T>::value>>ostream& operator<<( ostream& ostrm, const T& Contnr ){ ostrm << \"{ \"; bool first = true; for( const auto& elem : Contnr ){ if( !first ) ostrm << \", \"; ostrm << elem; first = false; }ostrm << \" }\"; return ostrm; }template<typename K, typename V>ostream& operator<<( ostream& ostrm, const map<K, V>& Contnr ){ ostrm << \"{ \"; bool first = true; for( const auto& elem : Contnr ){ if( !first ) ostrm << \", \"; ostrm << \"(\" << elem.first << \" : \" << elem.second << \")\"; first = false; }ostrm << \" }\"; return ostrm; }template<typename T1, typename T2>ostream& operator<<( ostream& ostrm, const pair<T1, T2>& prs ){ return ostrm << \"(\" << prs.first << \", \" << prs.second << \")\"; }void __prnt(){}template<typename T, typename... Args>void __prnt( T&& tpsvd, Args&&... args ){ cout << tpsvd; if( sizeof...( args ) ) cout << \", \"; __prnt( forward<Args>( args )... ); }",
+			// "#define db(...) (cout << \" (:> \" << #__VA_ARGS__ << \" |=  \", __prnt(__VA_ARGS__), cout << '\\n')",
+			"// clang-format on",
+			"#define ll long long",
+			"#define all(vls) vls.begin(),vls.end()",
+			"const ll md = 1e9 + 7, inf = 1e18, N = 1e6;",
+			"",
+			"",
+		],
+		"description": "gfg/codestudio"
 	},
 	"repetitions(loop)": {
 		"prefix": "loop",
 		"body": [
-         "for ( auto ${1:i} = ${2}; ${3}; ${4: cond} ) {",
-         "   $5",
-         "   }",
+			"for( auto ${1:i} = ${2:0}; ${1:i} ${3:}; ${1:i}${5:++} ){",
+			"   $6",
+			"   }",
 		],
 	},
-	// "print all": {
-	// 	"prefix": "print",
-	// 	"body": [
-	// 		"   for ( auto& val : ${container} ) {",
-	// 		"   cout << val << \" \";",
-	// 		"   }",
-	// 		"   cout << \"\\n\";",
-	// 	],
-	// 	"description": "print all"
-	// },
 	"vector": {
-		"prefix": "vinput",
+		"prefix": "inp",
 		"body": [
-			"int n;",
-			"cin >> n;",
-			"vector<int> v ( n );",
-			"for ( int i = 0; i < n; i++ ) {",
-			"   cin >> v [ i ];",
+			"int n,k;",
+			"scan( n );",
+			"vector<int> v( n );",
+			"for( int i = 0; i < n; i++ ){",
+			"   scan( v[ i ] );",
 			"   }",
 			"$1",
 		],
 		"description": "input vector"
+	},
+	"array C++": {
+		"prefix": "arr",
+		"body": [
+			"array<int, ${1:size}>"
+		],
+		"description": "array C++"
 	},
 	"print YES": {
 		"prefix": "yes",
@@ -85,19 +139,19 @@
 	},
 	"cout": {
 		"prefix": "co",
-		"body": [ "cout << $1 << ' ';", ],
+		"body": [ "cout << $1;", ],
 	},
 	"binary exponentiation": {
-		"prefix": "powx",
+		"prefix": "pow",
 		"body": [
-			"   int pow ( int base, int exp ) {",
-			"      int res = 1; ",
-			"      for ( ; exp > 0; exp >>= 1 ) {",
-			"         if ( exp & 1 ) res = res * base;",
-			"         base *= base;",
-			"         }",
-			"      return res;",
+			"int powx( ll base, ll exp ) {",
+			"   ll res = 1; ",
+			"   for ( ; exp > 0; exp >>= 1 ) {",
+			"      if ( exp & 1 ) res = ( res * base ) % md;",
+			"      base = ( base * base ) % md;",
 			"      }",
+			"   return res;",
+			"   }",
 		],
 		"description": "binary exponentiation"
 	},
@@ -150,15 +204,23 @@
 		"prefix": "itfor",
 		"body": [
 			"for( auto it=$1.begin(); it!=$1.end(); ++it ){",
-			"   auto i = *it;",
-			"   $2",
-			"   }",
+			"auto i = *it;",
+			"$2",
+			"}",
 		],
 		"description": "iterator for loop"
 	},
 	"vector<int>": {
 		"prefix": "vi",
 		"body": [ "vector<int> $1", ],
+	},
+	"vector<array<int,n>>": {
+		"prefix": "vai",
+		"body": [ "vector<array<int,$1>> $2", ],
+	},
+	"vector<array<char,n>>": {
+		"prefix": "vac",
+		"body": [ "vector<array<char,$1>> $2", ],
 	},
 	"vector<bool>": {
 		"prefix": "vb",
@@ -177,131 +239,285 @@
 	"vector<vector<int>> v( n , vector<int> (m, 0)); ": {
 		"prefix": "vvi2",
 		"body": [
-			"vector<vector<int>> v( $1, vector<int> ($2, 0));",],
+			"vector<vector<int>> v( $1, vector<int> ($2, 0));", ],
 	},
 	"vector<vector<string>>": {
 		"prefix": "vvs",
 		"body": [
-			"vector<vector<string>> $1",],
+			"vector<vector<string>> $1", ],
 	},
 	"pair<int,int>": {
 		"prefix": "pii",
 		"body": [
-			"pair<int,int> $1",],
+			"pair<int,int> $1", ],
 	},
 	"pair<string,int>": {
 		"prefix": "psi",
 		"body": [
-			"pair<string,int> $1",],
+			"pair<string,int> $1", ],
 	},
 	"vector<pair<int,int>>": {
 		"prefix": "vpii",
 		"body": [
-			"vector<pair<int,int>> $1",],
+			"vector<pair<int,int>> $1", ],
 	},
 	"vector<string>": {
 		"prefix": "vs",
 		"body": [
-			"vector<string> $1",],
+			"vector<string> $1", ],
 	},
 	"map<int,int>": {
 		"prefix": "mii",
 		"body": [
-			"map<int,int> $1",],
+			"map<int,int> $1", ],
 	},
 	"map<char,int>": {
 		"prefix": "mci",
 		"body": [
-			"map<char,int> $1",],
+			"map<char,int> $1", ],
 	},
 	"unordered_map<char,int>": {
 		"prefix": "umci",
 		"body": [
-			"unordered_map<char,int> $1",],
+			"unordered_map<char,int> $1; $1.max_load_factor( 0.25 ); $1.reserve( 1 << 6 );", ],
 	},
 	"unordered_map<int,int>": {
 		"prefix": "umii",
 		"body": [
-			"unordered_map<int,int> $1",],
+			"unordered_map<int,int> $1; $1.max_load_factor( 0.25 ); $1.reserve( 1 << 6 );", ],
 	},
 	"unordered_set<int>": {
 		"prefix": "usi",
 		"body": [
-			"unordered_set<int> $1",],
+			"unordered_set<int> $1", ],
 	},
 	"unordered_set<char>": {
 		"prefix": "usc",
 		"body": [
-			"unordered_set<char> $1",],
-	},
-	"unordered_set<string>": {
-		"prefix": "uss",
-		"body": [
-			"unordered_set<string> $1",],
+			"unordered_set<char> $1", ],
 	},
 	"set<int>": {
 		"prefix": "si",
 		"body": [
-			"set<int> $1",],
+			"set<int> $1", ],
+	},
+	"multiset<int>": {
+		"prefix": "msi",
+		"body": [
+			"multiset<int> $1", ],
+	},
+	"multiset<char>": {
+		"prefix": "msc",
+		"body": [
+			"multiset<char> $1", ],
 	},
 	"set<pair<int,int>>": {
 		"prefix": "spii",
 		"body": [
-			"set<pair<int,int>> $1",],
+			"set<pair<int,int>> $1", ],
 	},
 	"deque<pair<int,int>>": {
 		"prefix": "dpii",
 		"body": [
-			"deque<pair<int,int>> $1",],
+			"deque<pair<int,int>> $1", ],
 	},
 	"deque<int>": {
 		"prefix": "di",
 		"body": [
-			"deque<int> $1",],
+			"deque<int> $1", ],
 	},
 	"new line": {
 		"prefix": "nl",
 		"body": [
-			"cout << '\\n';",],
+			"cout << '\\n';", ],
 	},
-	"oset": {
-		"prefix": "oset",
+	"PBDS": {
+		"prefix": "pbds",
 		"body": [
-			"#include <ext/pb_ds/assoc_container.hpp>",
+			"#include<ext/pb_ds/assoc_container.hpp>",
+			"#include<ext/pb_ds/tree_policy.hpp>",
 			"using namespace __gnu_pbds;",
-			"typedef tree<int, null_type, less<int>, rb_tree_tag,tree_order_statistics_node_update> oset;",
+			"template <typename T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>; //find_by_order(iterator)//order_of_key",
+			"template <typename T, typename R> using omap = tree<T, R, less<T>, rb_tree_tag, tree_order_statistics_node_update>; //find_by_order(iterator)//order_of_key"
 		],
-		"description": "pbds set"
+		"description": "PBDS"
 	},
 	"debug": {
 		"prefix": "db",
 		"body": [ "db( $1 );", ],
 	},
+	"Print fn": {
+		"prefix": "print",
+		"body": [ "print( $1 );", ],
+	},
+	"Input fn": {
+		"prefix": "scan",
+		"body": [ "scan( $1 );", ],
+	},
+	"int_to_binary": {
+		"prefix": "to_binary",
+		"body": [
+			"string bstr( int x ){",
+			"   string str8;for( ; x > 0; x >>= 1 ) str8.push_back( '0' + ( x & 1 ) );",
+			"   reverse( str8.begin( ) , str8.end( ) );",
+			"   return str8;",
+			"   }"
+		],
+		"description": "int_to_binary"
+	},
 	"comparator": {
-	"prefix": "cmp",
-	"body": [
-	"struct comp{",
-	"   // if true then sort it in that way else not ",
-	"   bool operator()( const ${1:type}& l , const ${1:type}& r ) const{",
-	"     ${2}",
-	"     }",
-	"   };",
-	],
-	"description": "comparator"
-},
+		"prefix": "cmp",
+		"body": [
+			"struct comp{",
+			"   // if true then sort it in that way else not ",
+			"   bool operator()( const ${1:type}& l , const ${1:type}& r ) const{",
+			"     ${2}",
+			"     }",
+			"   };",
+		],
+		"description": "comparator"
+	},
 	"sort asc": {
-	"prefix": "sort",
-	"body": [
-		"sort( ${1:var}.${2}begin( ), ${1:var}.${2}end( ) );",
-	],
-	"description": "sort asc"
+		"prefix": "sort",
+		"body": [
+			"sort( ${1:var}.${2}begin( ), ${1:var}.${2}end( ) );",
+		],
+		"description": "sort asc"
 	},
 	"reverse": {
-	"prefix": "reverse",
-	"body": [
-		"reverse( ${1:var}.begin( ), ${1:var}.end( ) );",
-	],
-	"description": "reverse"
+		"prefix": "reverse",
+		"body": [
+			"reverse( ${1:var}.begin( ), ${1:var}.end( ) );",
+		],
+		"description": "reverse"
+	},
+	"ceil division": {
+		"prefix": "ceil",
+		"body": [
+			"( ${1:num} + ${2:den} - 1 ) / ${2:den}"
+		],
+		"description": "ceil division"
+	},
+	"kadane": {
+		"prefix": "kadane",
+		"body": [
+			"int kdn( vector<int>& v, const bool& c /*flag*/ ){",
+			"   // Least (c = false) or Highest NON-EMPTY subarray sum (c = true)",
+			"   int stp = 0, ans = ( c ) ? -inf : inf, f = 1, s1 = 0;",
+			"   for( auto i = 0; i < v.size(); i++ ){",
+			"      s1 += v[ i ];",
+			"      if( ( c and stp < 0 ) or ( !c and stp >= 0 ) ) s = 0;",
+			"      stp += v[ i ];",
+			"      if( c ){",
+			"         if( v[ i ] >= 0 ) f = 0;",
+			"         ans = max( ans, stp );",
+			"         }",
+			"      else{",
+			"         if( v[ i ] < 0 ) f = 0;",
+			"         ans = min( ans, stp );",
+			"         }",
+			"      }",
+			"   if( f ){",
+			"      if( c ) ans = *max_element( v.begin(), v.end() );",
+			"      else ans = s1;",
+			"      }",
+			"   return ans;",
+			"   }"
+		],
+		"description": "Kadane algorithm"
+	},
+	"memset": {
+		"prefix": "memset",
+		"body": [
+			"memset( ${1:name}, ${2:val}, sizeof( ${1:name} ) );"
+		],
+		"description": "memset"
+	},
+	"DSU": {
+		"prefix": "dsu",
+		"body": [
+			"struct dsu{",
+			"   vector<int> par, len;",
+			"   int c;",
+			"   dsu( int n ) : par( n + 1 ), len( n + 1, 1 ), c( n ){",
+			"      for( int i = 1; i <= n; ++i ) par[ i ] = i;",
+			"      }",
+			"   int find( int i ){",
+			"      return ( par[ i ] == i ? i : ( par[ i ] = find( par[ i ] ) ) );",
+			"      }",
+			"   bool same( const int& i,const int& j ){",
+			"      return find( i ) == find( j );",
+			"      }",
+			"   int size( const int& i ){",
+			"      return len[ find( i ) ];",
+			"      }",
+			"   int count(){",
+			"      return c;    //connected components",
+			"      }",
+			"   bool make( int i, int j ){",
+			"      if( ( i = find( i ) ) == ( j = find( j ) ) ) return false;",
+			"      else --c;",
+			"      if( len[ i ] < len[ j ] ) swap( i, j );",
+			"      par[ j ] = i;",
+			"      len[ i ] += len[ j ];",
+			"      return true;",
+			"      }",
+			"   };"
+		],
+		"description": "DSU"
+	},
+
+	////// SIEVE
+	"Primes check": {
+		"prefix": "sieve1",
+		"body": [
+			"#define MAXLEN 1e6",
+			"vector<bool> prime1( MAXLEN + 1 , true );",
+			"void primecheck( ){",
+			// "   for( int i = 1; i <= MAXLEN; i++ ) sieve [ i ] = true;",
+			"   for( int i = 2; i * i <= MAXLEN; i++ ){",
+			"      if( prime1 [ i ] == false ) continue;",
+			"      for( int j = i * i; j <= MAXLEN; j += i ){",
+			"         prime1 [ j ] = false;",
+			"         }",
+			"      }",
+			"   }"
+		],
+		"description": "Primes check"
+	},
+	"first prime of number": {
+		"prefix": "sieve2",
+		"body": [
+			"#define MAXLEN 1e6",
+			"vector<int> prime2( MAXLEN + 1 , 1 );",
+			"void firstprimes( ){",
+			"   for( int i = 2; i <= MAXLEN; i++ ){",
+			"      if( prime2 [ i ] != 1 ) continue;",
+			"      else prime2 [ i ] = i;",
+			"      for( int j = i * i; j <= MAXLEN; j += i ){",
+			"         if( prime2 [ j ] != 1 ) continue;",
+			"         prime2 [ j ] = i;",
+			"         }",
+			"      }",
+			"   }"
+		],
+		"description": "First prime of number"
+	},
+	"sliding window": {
+		"prefix": "sliding",
+		"body": [
+			"//SLIDING WINDOW",
+			"for( int i = 0, j = 0; j < ${1:size}; ++j ){",
+			"// CODE: use A[j] to update state which might make the window invalid a[j]++",
+			"   for( ; i < j and ${2:Cond}; i++ ){ // when condtion is invalid, keep increasing i until it's valid again",
+			"       // CODE: update state using A[i]",
+			"      }",
+			"   // db( i, j );",
+			"   // CODE : [i,j] we have got",
+			"   //ans += j-i+1 or ans = max(ans,j-i+1)  ",
+			"   }"
+		],
+		"description": "sliding window"
 	},
 
 }
