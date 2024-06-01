@@ -1,35 +1,52 @@
-// C
-#ifndef _GLIBCXX_NO_ASSERT
-#include <cassert>
-#endif
-// #include <cctype>
-#include <cmath>
-// #include <cstdio>
-#include <cstdlib>
-// #include <cstring>
 
-// C++
-#include <algorithm>
-#include <bitset>
+/** @file stdc++.h
+ *  This is an implementation file for a precompiled header.
+ */
+
+// Standard Input/Output
 #include <iostream>
+#include <istream>
+#include <ostream>
+#include <iomanip>
+#include <sstream>
+#include <concepts>
+
+// Containers
 #include <vector>
+#include <array>
 #include <deque>
-#include <queue>
-#include <set>
-#include <stack>
-#include <map>
 #include <list>
-#include <iterator>
-#include <string>
-// #include <functional>
-#include <forward_list>
-#include <random>
-// #include <array>
-#include <chrono>
-// #include <thread>
-// #include <tuple>
-#include <unordered_map>
+#include <set>
+#include <map>
 #include <unordered_set>
+#include <unordered_map>
+#include <queue>
+#include <stack>
+#include <valarray>
+
+// Algorithms
+#include <algorithm>
+#include <numeric>
+
+// Utilities
+#include <utility>
+#include <limits>
+#include <cmath>
+#include <string>
+#include <functional>
+#include <ranges>
+#include <bitset>
+
+// Time utilities
+#include <chrono>
+
+// Advanced type traits and meta-programming
 #include <type_traits>
-// #include <sstream>
-// #include <stdexcept>
+
+// Additional C standard headers (commonly useful in competitive programming)
+#include <cassert>
+#include <climits>
+#include <cfloat>
+#include <cstddef>
+#include <ctime>
+#include <cctype>
