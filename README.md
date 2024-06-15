@@ -13,7 +13,7 @@ You can replace the existing `stdc++.h` file in this directory with the one prov
 After replacing the file, you can use the following command to precompile your C++ code:
 
 ```bash/cmd
-g++ -O3 -std=c++2a -flto -Wall -Wextra -Wno-unused-parameter -Wno-unused-variable stdc++.h
+g++ -O2 -std=c++20 -flto -Wall -Wextra -Wno-unused-parameter -Wno-unused-variable stdc++.h
 ```
 
 This helps in speeding up compilation times by precompiling the header.
