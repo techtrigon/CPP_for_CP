@@ -139,7 +139,7 @@ Language : Cpp
 LineEnding:      DeriveLF
 MacroBlockBegin: ''
 MacroBlockEnd:   ''
-MaxEmptyLinesToKeep: 0
+MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
 ObjCBinPackProtocolList: Auto
 ObjCBlockIndentWidth: 2
@@ -182,11 +182,11 @@ SpaceBeforeCtorInitializerColon: true
 SpaceBeforeInheritanceColon: true
 SpaceBeforeParens : Custom
 SpaceBeforeParensOptions:
-  AfterControlStatements: true
+  AfterControlStatements: false
   AfterForeachMacros: false
   AfterFunctionDefinitionName: false
   AfterFunctionDeclarationName: false
-  AfterIfMacros:   true
+  AfterIfMacros:   false
   AfterOverloadedOperator: false
   AfterPlacementOperator : true
   AfterRequiresInClause: false
@@ -200,7 +200,7 @@ SpacesInAngles:  Never
 SpacesInParens: Custom
 SpacesInParensOptions:
   InConditionalStatements: false
-  InEmptyParentheses: false
+  InEmptyParentheses: true
   Other : false
 SpacesInLineCommentPrefix:
   Minimum:         1
