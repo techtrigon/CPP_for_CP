@@ -1,0 +1,32 @@
+CompileFlags:
+  Add: [-pipe, -D_FORTIFY_SOURCE=2, -D_GLIBCXX_ASSERTIONS, -std=c++23, -O2, -flto, -Wall, -Wextra, -Wno-unused-parameter, -Wno-unused-variable]
+  # Add: Specifies additional flags that will be passed to the compiler. !! Make sure they are same !!
+  # -pipe: Use pipes instead of temporary files for inter-process communication during compilation.
+  # -D_FORTIFY_SOURCE=2: Enables additional compile-time and runtime checks to prevent buffer overflows.
+  # -D_GLIBCXX_ASSERTIONS: Enables runtime assertions in the GNU C++ Standard Library to catch common issues.
+  # -std=c++23: Specifies the C++ standard version as C++23.
+  # -O2: Enables optimizations that do not involve a trade-off between performance and compilation time.
+  # -flto: Enables link-time optimization, improving the final executable's performance.
+  # -Wall: Enables most compiler warnings.
+  # -Wextra: Enables additional warnings not covered by -Wall.
+  # -Wno-unused-parameter: Disables warnings for unused function parameters.
+  # -Wno-unused-variable: Disables warnings for unused variables.
+
+  Compiler: g++  # C++ Compiler Name
+  # Compiler: Specifies the compiler to be used (g++ in this case).
+
+  CompilationDatabase: None
+  # CompilationDatabase: Specifies whether to use a compilation database (like compile_commands.json).
+  # Setting this to 'None' means no compilation database is being used.
+
+Index:
+  Background: Skip
+  # Background: Skip means background indexing is disabled, which can save system resources.
+
+  StandardLibrary: Yes
+  # StandardLibrary: Yes means the standard library will be indexed, which is useful for code completion and navigation.
+
+Hover:
+  ShowAKA: Yes
+  # ShowAKA: Yes enables the display of "also known as" (AKA) information in hover tooltips.
+  # This is useful for showing type aliases and other related type information.
