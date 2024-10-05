@@ -1,0 +1,8 @@
+[
+  {
+    "directory": "D:/Coding/Cpp",
+    "command": "C:\\gcc\\bin\\g++.exe -I\"D:/Coding/Cpp/include\" -pipe -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -std=c++23 -O2 -flto -Wall -Wextra -Wno-unused-parameter -Wno-unused-variable -o CMakeFiles\\my_program.dir\\clang.cpp.obj -c \"D:\\Coding\\Cpp\\clang.cpp\"",
+    "file": "D:\\Coding\\Cpp\\clang.cpp",
+    "output": "CMakeFiles\\my_program.dir\\clang.cpp.obj"
+  }
+]
