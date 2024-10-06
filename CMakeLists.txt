@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(Dev)
+project(my_project)
 
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 23)
@@ -24,4 +24,9 @@ file(GLOB SOURCES "${SOURCE_DIR}/*.cpp")
 
 add_executable(my_program ${SOURCES})
 
-include_directories(include)
+target_include_directories(my_program PUBLIC
+    "C:/gcc/include/c++/14.1.0"
+    "C:/gcc/include/c++/14.1.0/x86_64-w64-mingw32"
+    "C:/gcc/include/c++/14.1.0/backward"
+    "C:/gcc/lib/gcc/x86_64-w64-mingw32/14.1.0/include"
+)
