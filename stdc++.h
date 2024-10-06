@@ -1,58 +1,33 @@
-#include <cassert>
-#include <cctype>
-// #include <cfloat>
-#include <ciso646>
-#include <climits>
-// #include <cstdarg>
-// #include <cstddef>
-#include <cstdlib>
-
-#if __cplusplus >= 201103L
-#include <cstdint>
+#if __cplusplus >= 201703L
+#include <optional>
+#include <string_view>
+#include <variant>
 #endif
 
-// C++
-#include <bitset>
-// #include <complex>
+#if __cplusplus >= 202002L
 #include <algorithm>
+#include <array>
+#include <bit>
 #include <bitset>
+#include <concepts>
 #include <functional>
+#include <initializer_list>
 #include <iterator>
 #include <limits>
 #include <memory>
 #include <new>
+#include <numbers>
 #include <numeric>
+#include <ranges>
+#include <tuple>
+#include <type_traits>
 #include <typeinfo>
 #include <utility>
-
-#if __cplusplus >= 201103L
-#include <array>
 // #include <atomic>
-#include <initializer_list>
 // #include <ratio>
 // #include <scoped_allocator>
-#include <tuple>
 // #include <typeindex>
-#include <type_traits>
-#endif
-
-#if __cplusplus >= 201402L
-#endif
-
-#if __cplusplus >= 201703L
-// #include <any>
-// #include <execution>
-#include <optional>
-#include <variant>
-#include <string_view>
-#endif
-
-#if __cplusplus >= 202002L
-#include <bit>
 // #include <compare>
-#include <concepts>
-#include <numbers>
-#include <ranges>
 // #include <span>
 // #include <source_location>
 // #include <version>
@@ -72,18 +47,18 @@
 #include <cassert>
 #endif
 #include <cctype>
-// #include <cerrno>
-// #include <cfloat>
 #include <ciso646>
 #include <climits>
-// #include <clocale>
 #include <cmath>
+#include <cstdio>
+#include <cstdlib>
+// #include <cerrno>
+// #include <cfloat>
+// #include <clocale>
 // #include <csetjmp>
 // #include <csignal>
 // #include <cstdarg>
 // #include <cstddef>
-#include <cstdio>
-#include <cstdlib>
 // #include <cstring>
 // #include <ctime>
 // #include <cwchar>
@@ -149,8 +124,8 @@
 // #include <system_error>
 // #include <thread>
 #include <tuple>
-#include <typeindex>
 #include <type_traits>
+#include <typeindex>
 #include <unordered_map>
 #include <unordered_set>
 #endif
