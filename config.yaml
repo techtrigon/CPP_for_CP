@@ -1,3 +1,4 @@
+# PASTE INTO C:\Users\{username}\AppData\Local\clangd
 CompileFlags:
   Add: [-pipe, -D_FORTIFY_SOURCE=2, -D_GLIBCXX_ASSERTIONS, -std=c++23, -O2, -flto, -Wall, -Wextra, -Wno-unused-parameter, -Wno-unused-variable]
   # Add: Specifies additional flags that will be passed to the compiler. !! Make sure they are same !!
